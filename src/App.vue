@@ -34,7 +34,7 @@
                 <span v-if="task.completed">
                   <strike>{{ task.title }}</strike>
                 </span>
-                <span v-else>
+                <span class="task-title" v-else>
                   {{ task.title }}
                 </span>
               </span>
@@ -210,7 +210,7 @@ export default {
 }
 
 body {
-  background: #ff006a;
+  background: #313131;
 }
 
 header {
@@ -252,7 +252,7 @@ header {
       &:focus,
       &:valid {
         color: #fff;
-        background-color: #313131;
+        background-color: #111111;
         box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.15);
       }
     }
@@ -265,7 +265,7 @@ main {
   padding-right: 30px;
   margin: 0 auto;
   li {
-    background: #fff;
+    background: #111111;
     list-style: none;
     padding: 10px;
     margin-top: 10px;
@@ -274,12 +274,16 @@ main {
     display: flex;
     justify-content: space-between;
 
+    .task-title {
+      color: #fff;
+    }
+
     .task-text {
-      width: 490px;
+      width: 100%;
+      padding-right: 2px;
     }
 
     .edit-box {
-      width: 100%;
       resize: none;
       height: 5em;
       overflow: auto;
